@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Wallpaper Brz',
       theme: ThemeData(
+        
         //accentColor: Colors.white,
       
         primaryColor: Color(0xff3ebace),
