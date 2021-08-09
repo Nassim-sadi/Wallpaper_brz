@@ -22,12 +22,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Wallpaper Brz',
       theme: ThemeData(
-        
         //accentColor: Colors.white,
-      
-        primaryColor: Color(0xff3ebace),
+        primaryColor: Colors.white,
         accentColor: Color(0xFFD8ecf1),
-        scaffoldBackgroundColor: Color(0xFFf3f5f7),
+        scaffoldBackgroundColor: Color(0xFFf3f3f5),
       ),
       home: Home(),
     );

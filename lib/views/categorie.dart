@@ -18,7 +18,7 @@ class _CategorieState extends State<Categorie> {
   List<WallpaperModel> wallpapers = [];
   getCategorieWallpapers(String query) async {
     var response = await http.get(
-        Uri.parse('https://api.pexels.com/v1/search?query=$query?per_page=20'),
+        Uri.parse('https://api.pexels.com/v1/search?query=$query?per_page=30'),
         headers: {"Authorization": apiKey});
 
     //print(response.body.toString());

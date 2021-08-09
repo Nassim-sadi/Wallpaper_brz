@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      //backgroundColor: Colors.white,
       appBar: AppBar(
         title: brandName(),
         elevation: 0.0,
@@ -101,6 +101,7 @@ class _HomeState extends State<Home> {
                 height: 16,
               ),
               Container(
+                padding:EdgeInsets.fromLTRB(10, 0, 10, 0) ,
                 height: 70,
                 child: ListView.builder(
                   shrinkWrap: true,

@@ -33,8 +33,8 @@ Widget wallpapersList({required List<WallpaperModel> wallpapers, context}) {
       physics: BouncingScrollPhysics(),
       crossAxisCount: 2,
       childAspectRatio: 0.6,
-      mainAxisSpacing: 10,
-      crossAxisSpacing: 10,
+      mainAxisSpacing: 5,
+      crossAxisSpacing: 5,
       children: wallpapers.map((wallpaper) {
         return GridTile(
           child: GestureDetector(
@@ -43,19 +43,14 @@ Widget wallpapersList({required List<WallpaperModel> wallpapers, context}) {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          ImageView(imgUrl: wallpaper.src.original)));
+                          ImageView(imgUrl: wallpaper.src.portrait)));
             },
             child: Hero(
-              tag: wallpaper.src.original,
+              tag: wallpaper.src.portrait,
               child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    width: 1,
-                  ),
-                ),
+               
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(25),
                   child: CachedNetworkImage(
                     imageUrl: wallpaper.src.portrait,
                     fit: BoxFit.fill,

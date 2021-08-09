@@ -9,38 +9,39 @@ List<CategoriesModel> getCategories() {
 
 //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/5587802/pexels-photo-5587802.jpeg?cs=srgb&dl=pexels-daria-sannikova-5587802.jpg&fm=jpg';
+      'https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?crop=entropy&cs=srgb&dl=pexels-michael-block-3225517.jpg&fit=crop&fm=jpg&h=800&w=640';
   categorieModel.categorieName = 'Nature';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
   //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/7664871/pexels-photo-7664871.jpeg?cs=srgb&dl=pexels-solodsha-7664871.jpg&fm=jpg';
+      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?crop=entropy&cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fit=crop&fm=jpg&h=426&w=640';
   categorieModel.categorieName = 'Food ';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
 //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?cs=srgb&dl=pexels-kevin-ku-577585.jpg&fm=jpg';
+      'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?crop=entropy&cs=srgb&dl=pexels-kevin-ku-577585.jpg&fit=crop&fm=jpg&h=479&w=640';
+      
   categorieModel.categorieName = 'Coding';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
 //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?cs=srgb&dl=pexels-stas-knop-1626481.jpg&fm=jpg';
+      'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?crop=entropy&cs=srgb&dl=pexels-north-1407322.jpg&fit=crop&fm=jpg&h=426&w=640';
   categorieModel.categorieName = 'Music ';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
 //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/6468167/pexels-photo-6468167.jpeg?cs=srgb&dl=pexels-david-selbert-6468167.jpg&fm=jpg';
+      'https://images.pexels.com/photos/146083/pexels-photo-146083.jpeg?crop=entropy&cs=srgb&dl=pexels-flickr-146083.jpg&fit=crop&fm=jpg&h=966&w=640';
   categorieModel.categorieName = 'Animals ';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
 //
   categorieModel.imgUrl =
-      'https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?cs=srgb&dl=pexels-pixabay-302769.jpg&fm=jpg';
-  categorieModel.categorieName = 'Buildings';
+      'https://images.pexels.com/photos/275033/pexels-photo-275033.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-275033.jpg&fit=crop&fm=jpg&h=389&w=640';
+  categorieModel.categorieName = 'Games';
   categories.add(categorieModel);
   categorieModel = new CategoriesModel();
 
