@@ -1,8 +1,12 @@
+import 'dart:io' show Platform;
+import 'dart:typed_data';
 import 'dart:ui';
-
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ImageView extends StatefulWidget {
   final String imgUrl;
@@ -74,10 +78,7 @@ class _ImageViewState extends State<ImageView> {
                                   blurRadius: 0),
                             ]),
                       ),
-                      onPressed: () {
-                        print('Wallpeper set  ;) --------');
-                        print(widget.imgUrl);
-                      },
+                      onPressed: _save,
                       // style: style,
                     ),
                   ),
@@ -88,5 +89,39 @@ class _ImageViewState extends State<ImageView> {
         ),
       ),
     );
+  }
+
+  _save() async {
+    await _askPermission();
+    var response = await Dio()
+        .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
+    // ignore: non_constant_identifier_names
+    final result =
+        await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+    print(result);
+    Navigator.pop(context);
+    ScaffoldMessenger.of(context)
+      ..removeCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text('$result')));
+  }
+
+  _askPermission() async {
+    var status = await Permission.storage.status;
+    if (Platform.isIOS) {
+    } else {
+      if (status.isPermanentlyDenied) {
+        openAppSettings();
+      } else if (status.isDenied) {
+        // ignore: unused_local_variable
+        Map<Permission, PermissionStatus> statuses = await [
+          Permission.storage,
+        ].request();
+      } else {
+        // ignore: unused_local_variable
+        Map<Permission, PermissionStatus> statuses = await [
+          Permission.storage,
+        ].request();
+      }
+    }
   }
 }
